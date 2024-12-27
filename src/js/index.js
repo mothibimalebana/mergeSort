@@ -6,16 +6,17 @@
  * @returns {Array} sortedArray - returns an array that is sorted in ascending order
  */
 
-let arrayUpToEight = [1, 2, 3, 4, 5, 6, 7, 8];
+let arrayUpToEight = [2, 9, 6, 3, 7, 4, 5, 8];
+let sortedArray = [];
 
 const mergeSort = (array) => {
   if (array.length == 1) {
-    console.log('reached');
-    return;
+    console.log(array);
   } else {
-    let slicedArray = array.slice(0, array.length / 2);
-    console.log(slicedArray);
-    mergeSort(slicedArray);
+    const splitArrayLeft = array.slice(0, array.length / 2);
+    const splitArrayRight = array.slice(array.length / 2);
+    // mergeSort(splitArrayLeft);
+    mergeSort(splitArrayRight);
   }
 };
 
